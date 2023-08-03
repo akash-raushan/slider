@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Carousel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      width: 300px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .img {
+      width: 200px;
+      height: 200px;
+      border-radius: 4px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="1.jpg" class="img">
+    <br>
+    <button class="btn pre" onclick="previous()">Previous</button>
+    <button class="btn next" onclick="next()">Next</button>
+    <button class="btn share" onclick="shareImage()">Share</button>
+    <button class="btn download" onclick="downloadImage()">Download</button>
+  </div>
+</body>
+<script>
+  let img = document.getElementsByClassName("img")[0];
+  var links = ["1.jpg","2.png","3.jpg","4.png","5.jpg","6.jpg"];
+  var currentIndex = 0;
+
+
+  //Next Function
+  function next() {
+    currentIndex = (currentIndex + 1) % links.length;
+    img.src = links[currentIndex];
+  }
+
+
+  //Previous Function
+  var previousIndex = currentIndex;
+  function previous() {
+    previousIndex = (previousIndex - 1 + links.length) % links.length;
+    img.src = links[previousIndex];
+  }
+
+
+//Share Function
+
+function shareImage() {
+    if (navigator.share) {
+      // Use the Web Share API if available
+      navigator.share({
+        title: 'Check out this image!',
+        text: 'Take a look at this beautiful image!',
+        url: window.location.href
+      })
+        .then(() => console.log('Image shared successfully!'))
+        .catch((error) => console.error('Error sharing image:', error));
+    } else {
+      // Fallback for devices/browsers that don't support Web Share API
+      alert('Sharing is not supported on this device.');
+    }
+  }
+
+
+//Download Function
+  const downloadButtons = document.querySelectorAll('.download');
+  downloadButtons.forEach(button => {
+    button.addEventListener('click', downloadImage);
+  });
+
+  function downloadImage() {
+    const imageUrl = img.src;
+    const link = document.createElement('a');
+    link.href = imageUrl;
+    link.download = 'image.jpg';
+    link.click();
+  }
+</script>
+</html>
