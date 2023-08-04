@@ -49,6 +49,32 @@ body {
       height: 40px;
   }
 
+.shareImage{
+  float: right;
+  /* margin-right: 300px !important; */
+  cursor: pointer;
+  border-radius: 4px;
+ font-size: 14px;
+ /* padding: 8px 60px; */
+ transition: background-color 0.3s ease; 
+ padding: 5px 10px !important;
+  font-size: 8px !important;
+  background-color:  #ebe81700 !important;
+}
+.shareImage img{
+  width: 40px !important;
+  height: 40px !important;
+  /* border: none !important; */
+  
+}
+
+/* Position the share button in the top right corner of the image container */
+.shareImage {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+
   @media screen and (max-width:900px)
 {   
   
@@ -102,5 +128,9 @@ body {
       width: 25px;
       height: 25px;
   }
-  
+  .shareImage {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
 }
