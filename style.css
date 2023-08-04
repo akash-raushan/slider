@@ -49,6 +49,12 @@ body {
       height: 40px;
   }
 
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+}
+
 .shareImage{
   float: right;
   /* margin-right: 300px !important; */
@@ -88,8 +94,8 @@ body {
     /* padding: 20px; */
     padding-top: 170px;
     padding-bottom: 150px;
-    /*margin-left: -50px;*/
-    /*margin-right: -50px;*/
+    margin-left: -50px;
+    /* margin-right: -50px; */
     text-align: center;
     justify-content: center;
        align-items: center;
@@ -122,7 +128,9 @@ body {
   .button{
       justify-content: center;
        align-items: center;
-      display : flex ;    
+      display : flex ;  
+      flex-direction: row; 
+      flex-basis: 2000px; 
   }
   .btn img{
       width: 25px;
