@@ -87,7 +87,7 @@ body {
   
   .box {
   /* display: flex; */
-    width:100%;
+    width:device-width;
     height: 500px;
     background-color: #3b3a92;
     border-radius: 8px;
