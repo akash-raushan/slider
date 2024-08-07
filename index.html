@@ -4,38 +4,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Image Carousel</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Image Carousel</title>
+
+  <script type="module" crossorigin src="/assets/index-BWLoDVgs.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Bwsj-0o3.css">
 </head>
 
-<body class="bg-background w-screen h-screen flex justify-center items-center">
+<body class="bg-background w-screen h-screen overflow-hidden flex justify-center items-center">
   <div class="box">
-    <div class="image-container relative flex mx-auto justify-center w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-72 sm:h-80 md:h-96 lg:h-[500px]">
+    <div
+      class="image-container relative flex mx-auto justify-center w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl h-96 sm:h-[30rem] md:h-[40rem] lg:h-[30rem]">
       <div class="absolute inset-0 bg-[#ffffffa2] backdrop-blur-sm z-0"></div>
       <img src="asset/1.jpg" class="img w-full h-full object-contain border border-white rounded-lg z-10" alt="Image">
-      <img src="asset/share (1).png" class="absolute top-2 right-2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-[40px] lg:h-[40px] cursor-pointer z-20" alt="Share Icon" onclick="shareImage()">
+      <img src="asset/share (1).png"
+        class="absolute top-2 right-2 w-8 h-8 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-14 lg:h-14 cursor-pointer z-20"
+        alt="Share Icon" onclick="shareImage()">
     </div>
     <br>
-    <div class="button flex gap-2 sm:gap-3 justify-center">
-      <button class="btn bg-[#007bff] rounded-[4px] p-2 sm:p-3 md:p-4 download" onclick="downloadImage()">
-        <img src="asset/download.png" class="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" alt="Download">
+
+
+    <div class="button flex gap-3 sm:gap-4  justify-center mx-3">
+      <button class="btn bg-[#007bff] rounded-[4px] py-2 px-5 sm:p-5 md:p-6 lg:px-8 lg:py-2 download" onclick="downloadImage()">
+        <img src="asset/download.png" class="h-8 w-8  md:h-12 md:w-12 lg:h-12 lg:w-12" alt="Download">
       </button>
-      <button class="btn bg-[#007bff] rounded-[4px] p-2 sm:p-3 md:p-4 pre" onclick="previous()">
-        <img src="asset/previous.png" class="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" alt="Previous">
+      <button class="btn bg-[#007bff] rounded-[4px] py-2 px-5 sm:p-5 md:p-6 lg:px-8 lg:py-2 previous" onclick="previous()">
+        <img src="asset/previous.png" class="h-8 w-8  md:h-12 md:w-12 lg:h-12 lg:w-12" alt="Previous">
       </button>
-      <button class="btn bg-[#007bff] rounded-[4px] p-2 sm:p-3 md:p-4 play" onclick="play()">
-        <img src="asset/play.png" class="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" alt="Play">
+      <button class="btn bg-[#007bff] rounded-[4px] py-2 px-5 sm:p-5 md:p-6 lg:px-8 lg:py-2 play" onclick="play()">
+        <img src="asset/play.png" class="h-8 w-8  md:h-12 md:w-12 lg:h-12 lg:w-12" alt="Play">
       </button>
-      <button class="btn bg-[#007bff] rounded-[4px] p-2 sm:p-3 md:p-4 next" onclick="next()">
-        <img src="asset/next.png" class="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" alt="Next">
+      <button class="btn bg-[#007bff] rounded-[4px] py-2 px-5 sm:p-5 md:p-6 lg:px-8 lg:py-2 next" onclick="next()">
+        <img src="asset/next.png" class="h-8 w-8  md:h-12 md:w-12 lg:h-12 lg:w-12" alt="Next">
       </button>
-      <button class="btn bg-[#007bff] rounded-[4px] p-2 sm:p-3 md:p-4 share" onclick="shareWebsite()">
-        <img src="asset/share.png" class="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" alt="Share">
+      <button class="btn bg-[#007bff] rounded-[4px] py-2 px-5 sm:p-5 md:p-6 lg:px-8 lg:py-2 shareWebsite" onclick="shareWebsite()">
+        <img src="asset/share.png" class="h-8 w-8  md:h-12 md:w-12 lg:h-12 lg:w-12" alt="ShareWebsite">
       </button>
+      
+
+
+      <!-- <button class="btn bg-[#007bff] rounded-[4px] p-4 sm:p-5 md:p-6 lg:p-7 pre" onclick="previous()">
+        <img src="asset/previous.png" class="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14" alt="Previous">
+      </button>
+      <button class="btn bg-[#007bff] rounded-[4px] p-4 sm:p-5 md:p-6 lg:p-7 play" onclick="play()">
+        <img src="asset/play.png" class="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14" alt="Play">
+      </button>
+      <button class="btn bg-[#007bff] rounded-[4px] p-4 sm:p-5 md:p-6 lg:p-7 next" onclick="next()">
+        <img src="asset/next.png" class="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14" alt="Next">
+      </button>
+      <button class="btn bg-[#007bff] rounded-[4px] p-4 sm:p-5 md:p-6 lg:p-7 share" onclick="shareWebsite()">
+        <img src="asset/share.png" class="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14" alt="Share">
+      </button> -->
     </div>
   </div>
 </body>
-
-<script src="script.js"></script>
+
 
 </html>
